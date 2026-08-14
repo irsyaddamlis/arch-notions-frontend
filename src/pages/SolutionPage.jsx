@@ -114,7 +114,7 @@ export default function SolutionPage() {
               <a
                 key={index}
                 href={project.href}
-                className="relative flex flex-col items-stretch duration-300 ease-out p-4 sm:p-3 group min-h-[22rem] sm:min-h-[25rem] rounded-2xl"
+                className="relative flex flex-col items-stretch duration-300 ease-out p-4 sm:p-3.5 group min-h-[18rem] sm:min-h-[20rem] rounded-2xl"
               >
                 <span
                   className="absolute inset-0 z-20 block w-full h-full duration-300 ease-out border border-dashed group-hover:-translate-x-1 group-hover:-translate-y-1 rounded-2xl transition-colors"
@@ -125,19 +125,19 @@ export default function SolutionPage() {
                   style={{ borderColor: HAIRLINE }}
                 />
                 <span className="relative z-30 flex flex-col h-full duration-300 ease-out group-hover:-translate-x-1 group-hover:-translate-y-1">
-                  <span className="block w-full">
+                  <span className="block w-full overflow-hidden rounded-lg">
                     <img
                       src={project.imageUrl}
                       alt={project.title}
                       loading="lazy"
-                      className="w-full h-auto rounded-lg aspect-[16/9] object-cover"
+                      className="w-full h-28 sm:h-32 rounded-lg object-cover"
                     />
                   </span>
-                  <span className="block w-full px-1 mt-5 mb-1 sm:mt-3 flex-1">
-                    <span className="flex items-center mb-1 text-base font-semibold tracking-tight" style={{ color: INK }}>
+                  <span className="block w-full px-1 mt-3 mb-1 flex-1">
+                    <span className="flex items-center mb-1.5 text-xl sm:text-2xl font-bold tracking-tight" style={{ color: INK }}>
                       <span>{project.title}</span>
                       <svg
-                        className="group-hover:translate-x-0 group-hover:translate-y-0 -rotate-45 translate-y-1 -translate-x-1 w-3 h-3 ml-1 transition-all ease-in-out duration-200 transform stroke-current"
+                        className="group-hover:translate-x-0 group-hover:translate-y-0 -rotate-45 translate-y-1 -translate-x-1 w-4 h-4 ml-1.5 transition-all ease-in-out duration-200 transform stroke-current"
                         viewBox="0 0 13 15"
                       >
                         <g strokeWidth="1" fill="none" fillRule="evenodd" strokeLinecap="round" strokeLinejoin="round">
