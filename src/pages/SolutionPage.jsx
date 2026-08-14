@@ -84,12 +84,12 @@ export default function SolutionPage() {
       >
         {/* Header */}
         <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between mb-8 sm:mb-10">
-          <header>
+          <header className="text-center sm:text-left">
             <a href="#!" className="inline-block">
               <ArchNotionsLogo className="mb-1" />
             </a>
             <h1 className="font-bold text-xl sm:text-2xl" style={{ color: INK }}>
-              Establish, Growth, &amp; Sustain with Us
+              Establish, Grow, &amp; Sustain with Us
             </h1>
           </header>
           <NavBar current="Solution" />

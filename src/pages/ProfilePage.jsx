@@ -101,12 +101,12 @@ export default function ProfilePage() {
       >
         {/* Header — sama seperti SolutionPage */}
         <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between mb-8 sm:mb-10">
-          <header>
+          <header className="text-center sm:text-left">
             <a href="/" className="inline-block">
               <ArchNotionsLogo className="mb-1" />
             </a>
             <h1 className="font-bold text-xl sm:text-2xl" style={{ color: INK }}>
-              Establish, Growth, &amp; Sustain with Us
+              Establish, Grow, &amp; Sustain with Us
             </h1>
           </header>
           <NavBar current="About" />
@@ -166,25 +166,23 @@ export default function ProfilePage() {
         </p>
 
         {/* Vision & Mission */}
-        <div className="grid grid-cols-1 sm:grid-cols-[200px_1fr] gap-6 mb-12 reveal visible">
-          <div style={{ color: INK }} className="font-semibold text-lg space-y-6">
-            <p>Vision</p>
-            <p>Mission</p>
-          </div>
-          <div className="space-y-6">
-            <blockquote
-              className="pl-4 border-l-2 text-sm sm:text-base leading-7"
-              style={{ borderColor: HAIRLINE, color: MUTED }}
-            >
-              &ldquo;{profileConfig.vision}&rdquo;
-            </blockquote>
-            <blockquote
-              className="pl-4 border-l-2 text-sm sm:text-base leading-7"
-              style={{ borderColor: HAIRLINE, color: MUTED }}
-            >
-              &ldquo;{profileConfig.mission}&rdquo;
-            </blockquote>
-          </div>
+        <div className="space-y-8 mb-12 reveal visible">
+          {[
+            { label: "Vision", text: profileConfig.vision },
+            { label: "Mission", text: profileConfig.mission },
+          ].map((item) => (
+            <div key={item.label} className="grid grid-cols-1 sm:grid-cols-[200px_1fr] gap-2 sm:gap-6">
+              <p style={{ color: INK }} className="font-semibold text-lg">
+                {item.label}
+              </p>
+              <blockquote
+                className="pl-4 border-l-2 text-sm sm:text-base leading-7"
+                style={{ borderColor: HAIRLINE, color: MUTED }}
+              >
+                &ldquo;{item.text}&rdquo;
+              </blockquote>
+            </div>
+          ))}
         </div>
 
         <hr className="mb-12" style={{ borderColor: HAIRLINE }} />

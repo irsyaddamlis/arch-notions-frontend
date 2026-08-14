@@ -15,7 +15,7 @@ const NAV_ITEMS = [
  */
 export default function NavBar({ current }) {
   return (
-    <nav className="flex items-center gap-2">
+    <nav className="flex items-center justify-center gap-2 md:justify-start">
       {NAV_ITEMS.map((item) => {
         const isActive = item.label === current;
         return (
